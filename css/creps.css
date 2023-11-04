@@ -1,0 +1,72 @@
+/*********************************************/
+/*   Hoja de estilo de tortilla.html         */
+/*   autor: Samuel Lapeira Pérez             */ 
+/*   versión: 1.0                            */
+/*   fecha: octubre de 2023                  */
+/*   comentario: trabajo de leng de marcas   */
+/*********************************************/
+
+@font-face{src:url(../fonts/Montserrat-VariableFont_wght.ttf);
+    font-family:monospace;}
+
+@font-face {
+    font-family: sans-serif;
+    src: url(../fonts/open-sans.zip);
+}
+
+* {box-sizing: border-box;}
+
+  
+body {background-image: url(../img/mantel.jpg);
+    background-size: 50%;
+    margin:0;padding:0;  /* para que el wrapper se pegue al body*/
+        font-size: 1.2em; /* em y rem son medidas exclusivas para texto*/
+    }
+
+#wrapper {width: 80%; /* para width, la medida suele ser en porcentaje*/
+        margin:auto; 
+        padding: 5%;
+        background-color:#ffff;
+       }
+h1 {text-align: center;
+    font-family: 'Open Sans', sans-serif;}
+h1,h2 {margin-left: 2%;
+    border: solid lightcoral 1px;
+        border-radius: 5px;
+        padding: 5px;
+        background-color: #f3e7e7;
+        font-family: 'Open Sans', sans-serif;}
+        
+
+blockquote {font-style: italic;
+        border-left: 4px solid rgb(102, 9, 6);
+        background-color: rgb(243, 222, 222);
+        padding: 20px;}
+        
+img {/*float: right; Forma de colocar la imagen pegada a la derecha*/
+    width: 50%;/*Es un 50% del espacio que hay en el bloque*/
+    display: block;
+    margin:auto;
+border: solid rgb(240, 58, 58) 3px;} 
+                    /*poner siempre un % de ancho del bloque */
+
+
+ul {list-style-image: url(../img/bullet_ball_yellow.png)}
+
+dt {font-weight: bold;
+    font-variant: small-caps;
+    text-decoration: overline underline;
+    color: rgb(123, 11, 34);}
+
+    /*************** RESPONSIVIDAD : TOMAMOS CONTROL *******************/
+    /*************** VAMOS A HACER QUE EL WRAPPER PASE AL 100% EN MOVILES *******************/
+    /*************** ATENCIÓN: MEDIA QUERY *******************/
+    @media only screen and (width<700px) {
+        #wrapper {width:95%;} /* redefino el ancho de wrapper para moviles*/
+        img {width:100%; margin:auto;}
+        blockquote {padding: auto;
+                    border-left:4px;}
+        body {margin:auto;padding:auto;}
+            
+    }
+
